@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khdafiach's | Portfolio</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <span class="preloader-initials">AK</span>
+    <p class="preloader-text">Loading...</p>
+  </div>
+
+  <!-- Custom cursor (desktop / fine-pointer devices only) -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-outline" id="cursorOutline" aria-hidden="true"></div>
+
+  <!-- Decorative background layers -->
+  <div class="aurora" aria-hidden="true"></div>
+  <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+  <!-- Theme Toggle Button -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+    <ion-icon name="sunny-outline" class="icon-sun"></ion-icon>
+    <ion-icon name="moon-outline" class="icon-moon"></ion-icon>
+  </button>
+
+  <main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/profil.png" alt="Achmad Khadafi" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Achmad Khadafi">Achmad Khadafi</h1>
+          <p class="title">Web development</p>
+
+          <a href="./assets/cv/CV-Achmad Khadafi.pdf" download class="cv-btn">
+            <ion-icon name="download-outline"></ion-icon>
+            <span>Download CV</span>
+          </a>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:ach.khdafi@gmail.com" class="contact-link">ach.khdafi@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+628983000033" class="contact-link">+62 898-3000-033</a>
+            </div>
+          </li>
+
+          <!-- <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">WhatsApp</p>
+              <a href="https://wa.me/628983000033" 
+                target="_blank" 
+                class="contact-link">
+                +62 898-3000-033
+              </a>
+            </div>
+          </li> -->
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+              <time datetime="2011-01-07">07 January, 2011</time>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>South Tangerang, Indonesia</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://github.com/achkhdafi-stack" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.instagram.com/khdafiach_152" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/khdafiach" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <!-- NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Certificates</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+          <span class="navbar-indicator" id="navIndicator" aria-hidden="true"></span>
+        </ul>
+      </nav>
+
+
+      <!-- ABOUT -->
+      <article class="about active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title" data-reveal>About me</h2>
+        </header>
+
+        <section class="about-text" data-reveal>
+          <p>
+            Hello, my name is Achmad Khadafi, and I am a student majoring in Software and Game Development at SMK Skill Village Islamic School.
+          </p>
+          <p>
+            I am interested in web development, frontend development, and video editing. I enjoy learning new technologies and developing web-based projects. Throughout my time in school, I have been actively involved in coding and design projects, as well as school-based organizational activities. I believe that students can also become technology creators who contribute positively to society.
+          </p>
+        </section>
+
+
+        <!-- SERVICE -->
+        <section class="service">
+
+          <h3 class="h3 service-title">What I Can Help With</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item" data-reveal>
+              <div class="service-icon-box">
+                
+                <img src="./assets/images/web-development.svg" alt="Web development icon" width="65">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+                <p class="service-item-text">
+                  Building modern websites using HTML, CSS, JavaScript, React, and Tailwind CSS.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item" data-reveal data-reveal-delay="100">
+              <div class="service-icon-box">
+                <img src="./assets/images/ui-ux.svg" alt="design icon" width="65">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">UI/UX Design</h4>
+                <p class="service-item-text">
+                  Designing intuitive and visually appealing user interfaces with a focus on user experience.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item" data-reveal data-reveal-delay="200">
+              <div class="service-icon-box">
+                <img src="./assets/images/frontend.svg" alt="mobile app icon" width="65">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Frontend Development</h4>
+                <p class="service-item-text">
+                  Creating interactive and optimized web with modern technologies.
+                </p>  
+              </div>
+            </li>
+
+            <li class="service-item" data-reveal data-reveal-delay="300">
+              <div class="service-icon-box">
+                <img src="./assets/images/video-editing.svg" alt="camera icon" width="65">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Video Editing</h4>
+                <p class="service-item-text">
+                  Producing engaging video content for educational, promotional, and social media purposes.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!-- TESTIMONIALS -->
+        <section class="testimonials" data-reveal>
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <!-- Testimonials di bawah ini dimuat otomatis dari database (Firestore), -->
+          <!-- bukan data dummy lagi. Lihat assets/js/firebase-config.js & script.js -->
+          <ul class="testimonials-list has-scrollbar" data-testimonials-list>
+            <li class="testimonials-loading">Memuat testimonials...</li>
+          </ul>
+
+          <p class="testimonials-empty" data-testimonials-empty>
+            There are no testimonials yet. Be the first to submit a testimonial!
+          </p>
+
+          <details class="testimonial-form-wrapper">
+            <summary class="testimonial-form-toggle">
+              <ion-icon name="add-circle-outline"></ion-icon>
+              <span>Add Your Testimonial</span>
+            </summary>
+
+            <form class="form testimonial-form" data-testimonial-form>
+              <div class="avatar-input-wrapper">
+                <label class="avatar-input-label" for="testimonialAvatarInput">
+                  <img src="" alt="Preview foto" class="avatar-input-preview" data-testimonial-avatar-preview hidden>
+                  <ion-icon name="camera-outline"></ion-icon>
+                  <span>Add Profile Photo (Optional)</span>
+                </label>
+                <input type="file" id="testimonialAvatarInput" name="testimonialAvatar" accept="image/*" class="avatar-input" data-testimonial-avatar-input hidden>
+              </div>
+              <div class="input-wrapper">
+                <input type="text" name="testimonialName" class="form-input" placeholder="Your Name" required maxlength="50">
+              </div>
+              <textarea name="testimonialMessage" class="form-input" placeholder="Write your testimonial here..." required maxlength="500"></textarea>
+              <button class="form-btn" type="submit" data-testimonial-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Testimonial</span>
+              </button>
+              <p class="form-note">Testimonial will be displayed after approval by the admin.</p>
+            </form>
+          </details>
+
+        </section>
+
+
+        <!-- TESTIMONIALS MODAL -->
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="" alt="" width="80" data-modal-img>
+              </figure>
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title></h4>
+              <time data-modal-date></time>
+              <div data-modal-text></div>
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!-- TOOLS CAN I USE -->
+        <section class="tools" data-reveal>
+
+          <h3 class="h3 tools-title">Tools Can I Use</h3>
+
+          <div class="tools-marquee">
+            <div class="tools-track">
+
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                <span>Figma</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="VS Code">
+                <span>VS Code</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+                <span>Canva</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-plain.svg" alt="After Effects">
+                <span>After Effects</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                <span>Git</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                <span>GitHub</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <span>HTML5</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <span>CSS3</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <span>JavaScript</span>
+              </div>
+              <div class="tool-item">
+                
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React">
+                <span>React JS</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+                <span>Tailwind</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" alt="Laravel">
+                <span>Laravel</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="MySQL">
+                <span>MySQL</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="Firebase">
+                <span>Firebase</span>
+              </div>
+              <div class="tool-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="Supabase">
+                <span>Supabase</span>
+              </div>
+
+              <!-- duplicate set — for seamless infinite loop
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
+                <span>Figma</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="VS Code">
+                <span>VS Code</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva">
+                <span>Canva</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-plain.svg" alt="Photoshop">
+                <span>Photoshop</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                <span>Git</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                <span>GitHub</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <span>HTML5</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <span>CSS3</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <span>JavaScript</span>
+              </div>
+              <div class="tool-item" aria-hidden="true">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+                <span>Tailwind</span>
+              </div> -->
+
+            </div>
+          </div>
+
+        </section>
+
+      </article>
+
+
+      <!-- RESUME -->
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title" data-reveal>Resume</h2>
+        </header>
+
+        <section class="timeline" data-reveal>
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">SMK Skill Village Islamic School</h4>
+              <span>2025 - Present</span>
+              <p class="timeline-text">
+                Vocational &amp; technical school in Jonggol | I majored in Software and Game Development.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Madrasah Darus - Sunnah</h4>
+              <span>2022 - 2025</span>
+              <p class="timeline-text">
+                An Islamic boarding school under the Darus-Sunnah Waqf Foundation with a six-year curriculum
+                equivalent to junior high and high school.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <section class="timeline" data-reveal data-reveal-delay="100">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Member of the OSSV Health and Environment Division</h4>
+              <span>Mar 2026 — Present</span>
+              <p class="timeline-text">
+                Monitoring and maintaining the cleanliness and tidiness of the school environment,
+                collaborating with OSSV members in running school programs and activities, playing an
+                active role in maintaining the cleanliness, health and comfort of the school environment.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Public Decoration and Documentation Division — SMK Skill Village Islamic School</h4>
+              <span>Oct 2025 - Dec 2025</span>
+              <p class="timeline-text">
+                Taking photos and videos during events, documenting meetings, seminars, competitions,
+                and other activities, editing photos and videos.
+              </p>
+            </li>
+
+          </ol>
+        </section>
+
+        <section class="skill" data-reveal data-reveal-delay="200">
+          <h3 class="h3 skills-title">My skills</h3>
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+            </li>
+
+          </ul>
+        </section>
+
+      </article>
+
+
+      <!-- PORTFOLIO -->
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title" data-reveal>Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list" data-reveal>
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>Web development</button></li>
+            <li class="filter-item"><button data-filter-btn>Designer</button></li>
+            <li class="filter-item"><button data-filter-btn>Report</button></li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Web development</button></li>
+              <li class="select-item"><button data-select-item>Designer</button></li>
+              <li class="select-item"><button data-select-item>Report</button></li>
+            </ul>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-reveal data-filter-item data-category="web development">
+              <a href="https://achkhdafi-stack.github.io/khdafi-portfolio/">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-6.png" alt="portfolio" loading="lazy">
+                </figure>
+                <h3 class="project-title">Portfolio Website</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-reveal data-reveal-delay="60" data-filter-item data-category="web development">
+              <a href="https://achkhdafi-stack.github.io/khdafi.github.io/" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-1.png" alt="portfolio" loading="lazy">
+                </figure>
+                <h3 class="project-title">Portfolio Website</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-reveal data-reveal-delay="120" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-2.jpg" alt="trashbank" loading="lazy">
+                </figure>
+                <h3 class="project-title">Digital Trash Bank</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-reveal data-reveal-delay="180" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-3.png" alt="skillageedupark" loading="lazy">
+                </figure>
+                <h3 class="project-title">Skillage Edupark</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-reveal data-reveal-delay="60" data-filter-item data-category="report">
+              <a href="https://canva.link/yb4u697uobxeflm" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-4.png" alt="report" loading="lazy">
+                </figure>
+                <h3 class="project-title">Final Project Report Digital Trash Bank</h3>
+                <p class="project-category">Report</p>
+              </a>
+            </li>
+
+            <li class="project-item active" data-reveal data-reveal-delay="120" data-filter-item data-category="report">
+              <a href="https://canva.link/yhtaaf8c906onbg" target="_blank">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/project-5.png" alt="report" loading="lazy">
+                </figure>
+                <h3 class="project-title">Final Project Report Skillage Edupark</h3>
+                <p class="project-category">Report</p>
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+      <!-- CERTIFICATES -->
+      <article class="certificates" data-page="certificates">
+
+        <header>
+          <h2 class="h2 article-title" data-reveal>Certificates</h2>
+        </header>
+
+        <!-- Mobile select (same as portfolio) -->
+        <div class="cert-select-box">
+          <button class="cert-select" id="certSelect">
+            <div class="select-value" id="certSelectValue">All</div>
+            <div class="select-icon">
+              <ion-icon name="chevron-down"></ion-icon>
+            </div>
+          </button>
+          <ul class="cert-select-list" id="certSelectList">
+            <li class="cert-select-item"><button data-cert-mobile="all">All</button></li>
+            <li class="cert-select-item"><button data-cert-mobile="web">Web Dev</button></li>
+            <li class="cert-select-item"><button data-cert-mobile="database">Database</button></li>
+            <li class="cert-select-item"><button data-cert-mobile="other">Other</button></li>
+          </ul>
+        </div>
+
+        <!-- Desktop filter list (same style as portfolio) -->
+        <ul class="cert-filter-list">
+          <li><button class="cert-filter-btn active" data-cert-filter="all">All</button></li>
+          <li><button class="cert-filter-btn" data-cert-filter="web">Web Dev</button></li>
+          <li><button class="cert-filter-btn" data-cert-filter="database">Database</button></li>
+          <li><button class="cert-filter-btn" data-cert-filter="other">Other</button></li>
+        </ul>
+
+        <!-- Cards rendered by JS -->
+        <section class="cert-grid" data-reveal></section>
+
+        <p class="cert-count-text" id="certCount"></p>
+
+      </article>
+
+
+      <!-- CONTACT -->
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title" data-reveal>Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox data-reveal>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=..."
+              width="400"
+              height="300"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form" data-reveal data-reveal-delay="100">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form class="form" id="contactForm">
+            <div class="input-wrapper">
+              <input
+                type="text"
+                name="fullname"
+                class="form-input"
+                placeholder="Full name"
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                class="form-input"
+                placeholder="Email address"
+                required
+              />
+            </div>
+
+            <textarea
+              name="message"
+              class="form-input"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+            <button class="form-btn" type="submit">
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+
+          <!-- <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form> -->
+
+        </section>
+
+
+        <!-- COMMENTS -->
+        <section class="comments-section" data-reveal data-reveal-delay="200">
+
+          <h3 class="h3 form-title">Comments</h3>
+
+          <form class="form comment-form" data-comment-form>
+            <div class="avatar-input-wrapper">
+              <label class="avatar-input-label" for="commentAvatarInput">
+                <img src="" alt="Preview foto" class="avatar-input-preview" data-comment-avatar-preview hidden>
+                <ion-icon name="camera-outline"></ion-icon>
+                <span>Add Profile Photo (Optional)</span>
+              </label>
+              <input type="file" id="commentAvatarInput" name="commentAvatar" accept="image/*" class="avatar-input" data-comment-avatar-input hidden>
+            </div>
+            <div class="input-wrapper">
+              <input type="text" name="commentName" class="form-input" placeholder="Your Name" required maxlength="50">
+            </div>
+            <textarea name="commentMessage" class="form-input" placeholder="Write your comment here..." required maxlength="500"></textarea>
+            <button class="form-btn" type="submit" data-comment-btn>
+              <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+              <span>Post Comment</span>
+            </button>
+          </form>
+
+          <ul class="comment-list" data-comment-list>
+            <li class="comments-loading">Loading comments...</li>
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- Supabase (database untuk Comments & Testimonials, lihat supabase-config.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="./assets/js/supabase-config.js"></script>
+
+  <script src="./assets/js/script.js"></script>
+
+  <!-- Project card tilt -->
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+  <!-- Cursor, aurora glow, spotlight, particles, scroll reveal, navbar indicator, preloader -->
+  <script src="./assets/js/effects.js"></script>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="greenGradient" x1="0" y1="0" x2="512" y2="512">
+      <stop offset="0%" stop-color="#22C55E"/>
+      <stop offset="100%" stop-color="#16A34A"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- A -->
+  <path
+    d="M80 430L190 90H250L360 430H300L275 350H165L140 430H80ZM180 300H260L220 170L180 300Z"
+    fill="url(#greenGradient)"
+    filter="url(#glow)"
+  />
+
+  <!-- K -->
+  <path
+    d="M390 90H450V245L580 90H650L510 255L660 430H585L450 285V430H390V90Z"
+    transform="scale(0.75) translate(-40 0)"
+    fill="url(#greenGradient)"
+    filter="url(#glow)"
+  />
+
+</svg>
